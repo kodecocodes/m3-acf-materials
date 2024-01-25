@@ -31,22 +31,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+package com.example.mykotlinkodeco
 
-class FruitBox<A, B, C : Number, D : Number>(
-    private val firstItem: A,
-    private val secondItem: B,
-    private val numOfItems: C,
-    private val totalCost: D
-) {
-    fun printContents() {
-        println("FruitBox contents: First Item = $firstItem, Second Item = $secondItem")
-        println("Total Items = $numOfItems, Total Cost = $$totalCost")
-    }
-}
-fun main() {
-    val appleBananaBox = FruitBox("Apple", "Banana", 5, 10.5)
-    val orangeGrapeBox = FruitBox("Orange", "Grape", 8, 12.8)
+//class FruitBox<A, B, C : Number, D : Number>(
+//    private val firstItem: A,
+//    private val secondItem: B,
+//    private val numOfItems: C,
+//    private val totalCost: D
+//) {
+//    fun printContents() {
+//        println("FruitBox contents: First Item = $firstItem, Second Item = $secondItem")
+//        println("Total Items = $numOfItems, Total Cost = $$totalCost")
+//    }
+//}
+//fun main() {
+//    val appleBananaBox = FruitBox("Apple", "Banana", 5, 10.5)
+//    val orangeGrapeBox = FruitBox("Orange", "Grape", 8, 12.8)
+//
+//    appleBananaBox.printContents()
+//    orangeGrapeBox.printContents()
+//}
 
-    appleBananaBox.printContents()
-    orangeGrapeBox.printContents()
-}
