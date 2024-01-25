@@ -55,6 +55,5 @@ class FruitBox(
 
 fun main() {
     val appleBananaBox = FruitBox("Apple", "Banana", 5, 10.5, FruitType.APPLE)
-    
     appleBananaBox.printContents()
 }
