@@ -1,0 +1,356 @@
+```metadata
+number: "1"
+author: By Abdalla Ali
+difficulty: beginner
+editor: Kotlin Playground
+language: Kotlin
+lesson 1: Define Generic Classes 
+lesson description: Working with generic classes and methods.
+Introduction: In this lesson, you will learn the following points:
+- Explain how to create a generic class
+- Describe how to use generic methods
+- Identify how to use generic constraints
+
+This lesson serves as a thorough guide to crafting flexible and maintainable code:
+We'll look at making generic classes, allowing one class to handle different data types smoothly.
+We'll dive into using generic methods, enhancing your functions to work seamlessly with various data sets.
+We'll talk about generic constraints, which help set structured rules for your code.
+Let's get started on this together!
+
+Body:
+In Kotlin, a generic class is a class that can be parameterized with types, allowing it to work with different data types while maintaining type safety. It is defined with one or more type parameters inside angle brackets after the class name. Instances of the generic class can then be created with specific types, providing flexibility and reusability. For example, class FruitBox<T>(value: T) is a generic class that can hold values of any type T. This enables code to be more concise and adaptable by promoting the reuse of the same class logic for various data types.
+
+On the other hand, the Generic method is a function that can work with different data types by using type parameters. It is declared with angle brackets and type parameters before the return type. The type parameters allow the method to be flexible and provide type safety. 
+
+To create a generic class in Kotlin, you use the class keyword followed by angle brackets to declare type parameters. These parameters represent placeholders for actual types that will be specified when creating instances of the class. You can use the type parameters inside the class body wherever the type is relevant. When you instantiate the generic class, you provide concrete types for the parameters. For instance, in the example of a FruitBox class, the type parameter T is used to hold values, and instances can be created with specific types like Int or String. This flexibility allows for code reuse and adaptability across various data types, promoting a more concise and generic approach to class design in Kotlin.
+
+Generic constraints, also known as type constraints, allow you to restrict the types that can be used with a generic class or method. Constraints are specified using the "where" keyword and conditions on the type parameters. This ensures that the generic class or method operates only on types that satisfy certain criteria, such as implementing specific interfaces or having certain properties. Constraints enhance type safety and enable more precise control over the allowed types in generic constructs. 
+
+Now that you understand the generic class better, let's look at the video below, which will further explain with an example of how everything works.
+
+Video transcript:
+
+0:00:00.160,0:00:04.120
+all right, so what we need to do now is
+you need to open up your browser, and you
+
+0:00:04.120,0:00:09.160
+need to search for Kotlin playground
+when you search for that, you will see a
+
+0:00:09.160,0:00:14.200
+bunch of links in Google the 
+the second link that we need to
+
+0:00:14.200,0:00:18.840
+click on is what we will be working with
+and that is a page that is provided by
+
+0:00:18.840,0:00:24.080
+the Android developers, you will click on
+this Kotlin playground, you would see a
+
+0:00:24.080,0:00:28.640
+page that looks something like this
+inside this box here is where you're
+
+0:00:28.640,0:00:32.840
+going to write the Kotlin code
+and when you click on the the green
+
+0:00:32.840,0:00:38.040
+button here, that's where you'll be able
+to see the output of that code for this
+
+0:00:38.040,0:00:42.240
+example, they've given us this default
+hello world message, and you can see that
+
+0:00:42.240,0:00:47.040
+When you click the green button, you will see the output. Let's remove
+
+0:00:47.040,0:00:53.960
+this code here, let's delete this output
+and now we need to create our first
+
+0:00:53.960,0:01:01.880
+generic class what this class is called
+is fruit box this what would have two
+
+0:01:01.880,0:01:09.640
+data types, and then we will have four
+variables, and they will look like something
+
+0:01:09.640,0:01:16.480
+like this, all right so this FruitBox
+would have the following data types: A
+
+0:01:16.480,0:01:21.880
+B now, what are these are actually
+generic data types now generic data
+
+0:01:21.880,0:01:26.280
+types mean you could give them
+any letters that you want and they don't
+
+0:01:26.280,0:01:31.680
+have any specific data types, meaning
+that if you look at the third and the
+
+0:01:31.680,0:01:37.480
+fourth parameter, you would see that
+they are of a type number as if
+
+0:01:37.480,0:01:41.640
+you when you look at the first
+parameters A and B, they don't have any
+
+0:01:41.640,0:01:45.640
+data types, it's because they're generic
+so what later on when you use these
+
+0:01:45.640,0:01:51.320
+variables, whatever data that
+you initialize them with will be applied
+
+0:01:51.320,0:01:56.520
+automatically whereby if you look at the
+third and the fourth one, you have to
+
+0:01:56.520,0:01:57.320
+explicitly
+
+0:01:57.320,0:02:05.440
+use the data type number otherwise, you'll
+be able to see errors all over the place
+
+0:02:05.440,0:02:11.920
+now we have four variables here: the
+first one is the first item that is of a
+
+0:02:11.920,0:02:17.160
+type A, which means it's generic. The
+first and second variables are
+
+0:02:17.160,0:02:23.520
+generic data types whereby the third and
+the fourth is numbers and these
+
+0:02:23.520,0:02:30.520
+variables will actually be used later on
+to display some values in the console
+
+0:02:30.520,0:02:36.880
+below here, so this is the
+main the base structure of the FruitBox
+
+0:02:36.880,0:02:43.120
+class now inside the curly
+brackets here is where we're going to
+
+0:02:43.120,0:02:48.120
+create a function because right now, this
+class doesn't do anything we need to
+
+0:02:48.120,0:02:52.640
+display some values into the console to
+do that, we need to create another
+
+0:02:52.640,0:02:59.040
+function here, we have created a new
+function within the FruitBox class that
+
+0:02:59.040,0:03:05.680
+is called printContents now what this
+does it will allow us to print two print
+
+0:03:05.680,0:03:10.760
+line statements into the console, these
+print statements will show the
+
+0:03:10.760,0:03:17.080
+values of these four
+variables now let's first create these
+
+0:03:17.080,0:03:21.480
+print line statements, these are the
+print line statements that will be used
+
+0:03:21.480,0:03:27.840
+to print the values of these variables
+now the first one is the fruit box
+
+0:03:27.840,0:03:31.800
+basically, it shows you the first item
+the value of the first item and the
+
+0:03:31.800,0:03:37.200
+value of the second item, the second
+print line statement will show the
+
+0:03:37.200,0:03:43.120
+number of items and the total cost right
+now, if you click on the green arrow
+
+0:03:43.120,0:03:47.680
+button, you won't see any output. Instead,
+you will see a bunch of errors. It's
+
+0:03:47.680,0:03:52.080
+because we haven't yet created a main
+function, you need to have a main
+
+0:03:52.080,0:03:57.640
+function within this code here
+so that you'll be able to
+
+0:03:57.640,0:04:03.720
+display the value values inside this
+printContents, so the next step is we'll
+
+0:04:03.720,0:04:10.520
+create a main function so we have just
+created a simple plain main function as
+
+0:04:10.520,0:04:14.000
+you can see here now the moment you
+click on the green arrow
+
+0:04:14.000,0:04:18.960
+button just to see what this output and
+you won't see any errors right now
+
+0:04:18.960,0:04:23.040
+because we have the main function right
+here now what we need to do inside this
+
+0:04:23.040,0:04:28.880
+main function, we need to initialize some
+values so that we could pass
+
+0:04:28.880,0:04:35.120
+them through the FruitBox, and that way
+we can call the printContents
+
+0:04:35.120,0:04:41.600
+function so that we could pass whatever
+values and show them inside these two
+
+0:04:41.600,0:04:46.560
+print line statements so that's the next
+thing that we need to do here we have
+
+0:04:46.560,0:04:53.320
+just created and initialized two
+variables, the first
+
+0:04:53.320,0:04:58.040
+variable is called appleBananaBox
+this allows us to initialize
+
+0:04:58.040,0:05:04.680
+the FruitBox with apple banana and then
+some number values as you can see this
+
+0:05:04.680,0:05:09.000
+the third one would be the number of
+items inside the fruit box and the total
+
+0:05:09.000,0:05:15.160
+cost the same thing applies for the
+second variable here that is orangeGrapBox
+
+0:05:15.160,0:05:21.080
+and that is initialized with
+these values here, but now for
+
+0:05:21.080,0:05:28.040
+us to display those values we can't
+actually, have them displayed unless if
+
+0:05:28.040,0:05:34.520
+we call this printContents. Now this
+printContents is within the FruitBox
+
+0:05:34.520,0:05:39.880
+and for us to call it, we
+need to use these two variables now
+
+0:05:39.880,0:05:45.920
+let's do it right now. As you can see
+right here, we have
+
+0:05:45.920,0:05:49.840
+declared and initialized the appleBananaBox and the orangeGrapeBox, we
+
+0:05:49.840,0:05:55.840
+can call the printContents and
+whatever values that we have inside here
+
+0:05:55.840,0:06:01.360
+will be shown inside these two print
+line statements, so how does this work? Is
+
+0:06:01.360,0:06:07.760
+because we have this FruitBox, which has the first
+and the second item, and we're actually
+
+0:06:07.760,0:06:13.680
+referencing those first and the second
+item variables inside the first print
+
+0:06:13.680,0:06:18.240
+line statement, as you can see right here
+this is the first item, and this is the
+
+0:06:18.240,0:06:22.440
+second item so whatever
+value that we have inside the first and
+
+0:06:22.440,0:06:28.960
+the second will be shown right here
+whereby the third and the fourth values
+
+0:06:28.960,0:06:34.480
+will be shown inside the second print
+light statement, as you can see here we
+
+0:06:34.480,0:06:39.200
+have the number of items, and we have the
+total cost now we're doing the same
+
+0:06:39.200,0:06:42.560
+thing for the orangeGrapeBox and you
+could see the
+
+0:06:42.560,0:06:49.640
+values being printed inside this
+second line here now to see the
+
+0:06:49.640,0:06:55.080
+output all you have to do is click on
+this green arrow button and let's wait
+
+0:06:55.080,0:06:59.720
+for it and you can see this is how the
+output looks like and you can see that
+
+0:06:59.720,0:07:05.400
+we have the first fruit box and that is
+by calling the appleBananaBox
+
+0:07:05.400,0:07:11.040
+here so we're passing the apple and the
+banana and then the second print
+
+0:07:11.040,0:07:16.600
+statements we have these values the same
+thing applies for the orangeGrapeBox
+
+0:07:16.600,0:07:22.520
+so this demos how the generic
+class works in Kotlin
+
+Conclusion: Now that we have understood what is a generic class in Kotlin and how it works, using this approach will help us craft flexible, reusable, and type-safe code. This next lesson will look into Kotlin Extensions and how they work.
+
+```
