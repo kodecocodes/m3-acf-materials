@@ -33,20 +33,17 @@
  */
 
 class FruitBox<A, B, C : Number, D : Number>(
-    private val firstItem: A,
-    private val secondItem: B,
-    private val numOfItems: C,
-    private val totalCost: D
-) {
-    fun printContents() {
-        println("FruitBox contents: First Item = $firstItem, Second Item = $secondItem")
-        println("Total Items = $numOfItems, Total Cost = $$totalCost")
-    }
+    val firstItem: A,
+    val secondItem: B,
+    val numOfItems: C,
+    val totalCost: D)
+
+fun <A, B, C : Number, D : Number> printContents(fruitBox: FruitBox<A, B, C, D>) {
+	println("FruitBox contents: First Item = ${fruitBox.firstItem}, Second Item = ${fruitBox.secondItem}")
+    println("Total Items = ${fruitBox.numOfItems}, Total Cost = $${fruitBox.totalCost}")
 }
+
 fun main() {
     val appleBananaBox = FruitBox("Apple", "Banana", 5, 10.5)
-    val orangeGrapeBox = FruitBox("Orange", "Grape", 8, 12.8)
-
-    appleBananaBox.printContents()
-    orangeGrapeBox.printContents()
+    printContents(appleBananaBox)
 }
