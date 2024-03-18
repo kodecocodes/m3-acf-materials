@@ -40,7 +40,7 @@ class FruitBox<A, B, C : Number, D : Number>(
 
 fun <A, B, C : Number, D : Number> printContents(fruitBox: FruitBox<A, B, C, D>) {
 	println("FruitBox contents: First Item = ${fruitBox.firstItem}, Second Item = ${fruitBox.secondItem}")
-    println("Total Items = ${fruitBox.numOfItems}, Total Cost = $${fruitBox.totalCost}")
+    	println("Total Items = ${fruitBox.numOfItems}, Total Cost = $${fruitBox.totalCost}")
 }
 
 fun main() {
