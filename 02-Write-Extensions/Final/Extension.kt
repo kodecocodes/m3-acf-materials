@@ -40,7 +40,7 @@ class FruitBox<A, B, C : Number, D : Number>(
 )
 
 fun <A, B, C : Number, D : Number> FruitBox<A, B, C, D>.calculateTotalCost(): Double {
-    return numOfItems.toDouble() * totalCost.toDouble()
+    return this.numOfItems.toDouble() * this.totalCost.toDouble()
 }
 
 fun main() {
